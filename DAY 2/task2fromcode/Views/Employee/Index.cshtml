@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<employee>
+
+
+@{
+    int index = 1;
+}
+<div>
+    <div>
+        <a class="btn btn-success" href="/employee/addform">ADD NEW EMP</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="col-1">#</th>
+                <th class="col-8">Name</th>
+                <th class="col-3">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@(index++)</th>
+                    <td>@item.Fname  @item.Mname @item.Lname</td>
+
+                    <td><a class="btn btn-info" href="/employee/getinfo/@item.SSN">Details</a> <a class="btn btn-primary" href="/employee/editform/@item.SSN">Edit</a> <a class="btn btn-danger" href="/employee/delete/@item.SSN">Delete</a></td>
+                </tr>
+            }
+
+
+
+
+
+        </tbody>
+    </table>
+
+</div>
