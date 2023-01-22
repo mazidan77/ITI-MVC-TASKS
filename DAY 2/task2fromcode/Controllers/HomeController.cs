@@ -25,9 +25,12 @@ namespace task2fromcode.Controllers
           
             if (q!=null)
             {
-
-                 HttpContext.Session.SetInt32("id",q.SSN);
+                //set session
+                HttpContext.Session.SetInt32("id", q.SSN);
                 return RedirectToAction("userinfo", "Employee");
+
+
+
             }
             else
             {
