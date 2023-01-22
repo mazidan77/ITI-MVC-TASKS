@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model employee;
+<style>
+
+
+
+
+    .two {
+        /* grid-column: 7/13; */
+        color: GRAY;
+        /* padding: 30PX 20PX;
+            background-color: aqua; */
+    }
+
+    th {
+        padding-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+
+
+
+
+<div>
+    <span class="two">Full Name:</span>
+
+    <span>@Model.Fname @Model.Lname</span>
+</div>
+<div>
+
+    <span class="two">SSN:</span>
+
+    <span>@Model.SSN</span>
+</div>
+<div>
+    <span class="two">Gender:</span>
+
+    <span>
+        @Model.sex
+    </span>
+</div>
+<div>
+    <span class="two">Birth Date:</span>
+
+    <span>@Model.Bdate</span>
+</div>
+
+
+<div>
+    <span class="two">Address:</span>
+
+    <span>@Model.address</span>
+</div>
+
+
+<div>
+    <span class="two">Salary:</span>
+
+    <span>@Model.salary</span>
+</div>
+
+<div>
+    <span class="two">SuperVisor:</span>
+
+    <span>
+        @foreach (var emp in ViewBag.emp)
+        {
+            if (Model.superid == emp.SSN)
+            {
+                <span>  @emp.Fname @emp.Lname </span>
+            }
+        }
+    </span>
+
+</div>
+<span class="two">projects</span>
+@foreach (var item in @Model.workfors)
+{
+    @if (@item.Project.Name == null)
+    {
+        <h6>no</h6>
+    }
+    else
+    {
+        <div>
+            <li> @item.Project.Name</li>
+        </div>
+    }
+
+
+
+
+}

@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model employee;
+<form action="/employee/afteredit">
+
+    <table>
+        <tr>
+            <th> <label for="first-name">First Name:</label></th>
+            <th><input type="text" id="first-name" name="Fname" value="@Model.Fname"></th>
+        </tr>
+        <tr>
+            <th><label for="last-name">Last Name:</label></th>
+            <th><input type="text" id="last-name" name="Lname" value="@Model.Lname"></th>
+        </tr>
+        <tr>
+            <th> <label for="ssn">SSN:</label></th>
+            <th><input type="hidden" id="ssn" name="SSN" value="@Model.SSN"></th>
+        </tr>
+        <tr>
+            <th><label for="salary">Salary:</label></th>
+            <th> <input type="text" id="salary" name="salary" value="@Model.salary"></th>
+        </tr>
+        <tr>
+            <th> <label for="address">Address:</label></th>
+            <th> <input type="text" id="address" name="address" value="@Model.address"><br></th>
+        </tr>
+        <tr>
+            <th>
+                <label for="super">SuperVisor</label>
+            </th>
+            <th>
+                <select name="Superssn" id="super">
+                    <option value="">select supervisor</option>
+
+                    @foreach (var item in ViewBag.emp)
+                    {
+                        @if (item.SSN == Model.SSN)
+                        {
+                            <option selected value="@item.SSN">@item.Fname @item.Lname</option>
+
+                        }
+                        <option value="@item.SSN">@item.Fname @item.Lname</option>
+
+                    }
+
+
+
+
+            </th>
+
+            </select>
+        </tr>
+
+    </table>
+
+
+    <input type="submit" value="Submit">
+</form>

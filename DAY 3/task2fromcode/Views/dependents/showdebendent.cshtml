@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewData["Title"] = "showdebendent";
+}
+
+<h1>debendent</h1>
+@model List<dependent>
+
+
+<style>
+
+
+
+
+/*    .two {
+        /* grid-column: 7/13; */
+        color: GRAY;
+        /* padding: 30PX 20PX;
+            background-color: aqua; */
+    }
+
+    th {
+        padding-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+@*@foreach(var item in @Model){*@
+    
+@**/
+
+
+   
+
+
+
+
+
+
+@*@*@**@
+@*<div>
+    <span class="two"> Name:</span>
+
+    <span>@item.name </span>
+</div>
+<div>
+
+    <span class="two">Sex</span>
+
+    <span>@item.sex</span>
+</div>
+<div>
+    <span class="two">B DATE:</span>
+
+    <span>
+        @item.Bdate
+    </span>
+</div>
+<div>
+    <span class="two">relathion ship:</span>
+
+    <span>@item.relationship</span>
+</div>
+
+<div>------------------------------</div>
+*@*@*@
+
+
+
+
+
+}
+*@
+
+
+
+
+
+
+@{
+    int index = 1;
+}
+<div>
+    <div>
+        <a class="btn btn-success" href="/dependents/addform">ADD NEW Dependent</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="col-1">#</th>
+                <th class="col-2">Name</th>
+                <th class="col-2">SEX</th>
+                <th class="col-2">BIRTH DATE</th>
+                <th class="col-2">RELATHION</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@(index++)</th>
+                    <td>@item.name</td>
+                    <td>@item.sex</td>
+                    <td>@item.Bdate</td>
+                    <td>@item.relationship</td>
+                    <td><a class="btn btn-info" href="/employee/getinfo/">Details</a> <a class="btn btn-primary" href="/employee/editform/">Edit</a> <a class="btn btn-danger" href="/employee/delete/">Delete</a></td>
+                </tr>
+
+
+            }
+
+
+
+
+
+        </tbody>
+    </table>
+
+</div>
