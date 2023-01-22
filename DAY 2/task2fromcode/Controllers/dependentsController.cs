@@ -17,7 +17,6 @@ namespace task2fromcode.Controllers
 
             var qq = DB.Dependents.Where(x => x.EmployeeSSN == id).ToList();
             ViewBag.emp = DB.employees.ToList();
-
             return View(qq);
         }
 
@@ -28,12 +27,19 @@ namespace task2fromcode.Controllers
 
             var qq = DB.employees.Where(x => x.SSN == id).SingleOrDefault();
             return View(qq);
+
         }
 
         public IActionResult addnew(dependent de)
         {
             DB.Dependents.Add(de);
             DB.SaveChanges();
+
+           // set TempData
+            TempData["name"] = "new dependent added";
+
+
+
 
 
             return RedirectToAction(nameof(showdebendent));

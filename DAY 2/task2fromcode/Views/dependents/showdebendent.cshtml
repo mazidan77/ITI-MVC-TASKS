@@ -26,57 +26,26 @@
     div {
         margin-bottom: 10px;
     }
+
+    .cola {
+        color: green;
+    }
 </style>
-@*@foreach(var item in @Model){*@
-    
-@**/
+
+ 
+<!--temp data with save-->
+@*
+@{
+    TempData.Keep("name");
+}*@
 
 
-   
+<!--GET TempData-->
+<h3 class="cola">@TempData["name"]</h3>
 
+<!--GET TempData with save -->
 
-
-
-
-
-@*@*@**@
-@*<div>
-    <span class="two"> Name:</span>
-
-    <span>@item.name </span>
-</div>
-<div>
-
-    <span class="two">Sex</span>
-
-    <span>@item.sex</span>
-</div>
-<div>
-    <span class="two">B DATE:</span>
-
-    <span>
-        @item.Bdate
-    </span>
-</div>
-<div>
-    <span class="two">relathion ship:</span>
-
-    <span>@item.relationship</span>
-</div>
-
-<div>------------------------------</div>
-*@*@*@
-
-
-
-
-
-}
-*@
-
-
-
-
+@*<h3 class="cola">@TempData.Peek("name")</h3>*@
 
 
 @{

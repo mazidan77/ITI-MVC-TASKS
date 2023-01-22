@@ -22,11 +22,21 @@ namespace task2fromcode.Controllers
         }
         public IActionResult userinfo()
         {
+
             var id = HttpContext.Session.GetInt32("id");
+
             var q = DB.employees.Where(x => x.SSN == id).SingleOrDefault();
             ViewBag.emp = DB.employees.ToList();
              
-            return View(q);
+            if (id!=null)
+            {
+                return View(q);
+            }
+            else
+            {
+                return View("../Home/index");
+            }
+          
         }
      
 
