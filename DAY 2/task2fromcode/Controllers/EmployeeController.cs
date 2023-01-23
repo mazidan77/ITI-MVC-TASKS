@@ -25,6 +25,8 @@ namespace task2fromcode.Controllers
 
             var id = HttpContext.Session.GetInt32("id");
 
+           
+
             var q = DB.employees.Where(x => x.SSN == id).SingleOrDefault();
             ViewBag.emp = DB.employees.ToList();
              
