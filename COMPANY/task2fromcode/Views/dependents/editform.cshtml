@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "editform";
+}
+
+<h1>editform</h1>
+
+@model dependent
+<form action="/dependents/afteredit">
+
+    <table>
+        <th><input type="hidden" value="@Model.EmployeeSSN" id="name" name="EmployeeSSN"></th>
+        <tr>
+            <th> <label for="name">First Name:</label></th>
+            <th><input type="text" value="@Model.name" id="name" name="name"></th>
+        </tr>
+        <tr>
+            <th><label for="last-name">Sex:</label></th>
+            <th><input type="text" value="@Model.sex" id="sex" name="sex"></th>
+        </tr>
+        <tr>
+            <th><label for="last-name">B DATE</label></th>
+            <th><input type="text" value="@Model.Bdate" id="Bdate" name="Bdate"></th>
+        </tr>
+        <tr>
+            <th> <label for="ssn">relationship:</label></th>
+            <th><input type="text" value="@Model.relationship" id="relationship" name="relationship"></th>
+        </tr>
+
+
+    </table>
+
+
+    <input type="submit" value="Submit">
+</form>

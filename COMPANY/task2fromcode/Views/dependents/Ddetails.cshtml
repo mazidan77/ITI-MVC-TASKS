@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "Ddetails";
+}
+
+<h1>Details</h1>
+
+@model dependent
+
+
+
+
+<style>
+
+
+
+
+    .two {
+        /* grid-column: 7/13; */
+        color: GRAY;
+        /* padding: 30PX 20PX;
+        background-color: aqua; */
+    }
+
+    th {
+        padding-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+
+
+
+
+<div>
+    <span class="two"> Name:</span>
+
+    <span>@Model.name </span>
+</div>
+<div>
+
+    <span class="two">SSN:</span>
+
+    <span>@Model.EmployeeSSN</span>
+</div>
+<div>
+    <span class="two">Gender:</span>
+
+    <span>
+    @Model.sex
+    </span>
+</div>
+<div>
+    <span class="two">Birth Date:</span>
+
+    <span>@Model.Bdate</span>
+</div>
+
+
+<div>
+    <span class="two">Relation ship:</span>
+
+    <span>@Model.relationship</span>
+</div>
+
+
+
+
+   
+
+
+
