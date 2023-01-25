@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>department</h1>
+@model department
+
+
+
+<div>
+    <span class="two">Department name you manage:</span>
+
+    <span>
+        <b> @Model.DName</b>
+       
+    </span>
+</div>
+
+
+<span class="two">projects in this department:</span>
+@foreach(var item in Model.Projects)
+{
+
+    <div>
+       
+
+        <span>
+            <b> @item.Name</b>
+
+        </span>
+    </div>
+}
+
+<a href="/department">ADD employee to the projects </a>

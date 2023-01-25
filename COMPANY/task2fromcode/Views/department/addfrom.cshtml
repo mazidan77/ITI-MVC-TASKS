@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<employee>
+<form action="/Department/afteradd">
+    <label>choose employee: </label>
+    <select name="item" id="item">
+        @foreach (var item in Model)
+        {
+                <option value="@item.SSN">@item.Fname  @item.Lname</option>
+        }    
+    </select>
+    <label >choose project: </label>
+    <select name="p" id="p" multiple >
+        @foreach (var p in ViewBag.dps)
+        {
+                <option  value="@p.Pnumber" >@p.Name</option>
+        }
+    </select>
+    <input type="submit" value="Add"/>
+</form>
