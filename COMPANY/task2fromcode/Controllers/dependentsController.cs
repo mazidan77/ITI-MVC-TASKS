@@ -92,5 +92,14 @@ namespace task2fromcode.Controllers
             return RedirectToAction(nameof(showdebendent));
 
         }
+
+        //bind data ==> premetive - array - dictionary - object
+        //periority ==> form data(post) -route - query string (get)-file brovider - not found
+        public IActionResult dec(Dictionary<string,int> phones)
+        {
+
+
+            return Content("");
+        }
     }
 }

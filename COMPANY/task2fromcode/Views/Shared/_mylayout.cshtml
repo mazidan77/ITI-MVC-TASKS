@@ -52,6 +52,32 @@
     <div class="container">
         <div class="row">
             <div class="col-2 side">
+                @if (Context.Request.Cookies["reqnum"] != null)
+                {
+                    @if (int.Parse(Context.Request.Cookies["reqnum"]) <= 10)
+                    {
+                        <h2>*</h2>
+                        @Context.Request.Cookies["reqnum"]
+                    }
+                    else if (int.Parse(Context.Request.Cookies["reqnum"]) <= 20)
+                    {
+                        <h2>**</h2>
+                    }
+                    else if (int.Parse(Context.Request.Cookies["reqnum"]) <= 30)
+                    {
+                        <h2>***</h2>
+                    }
+                    else if (int.Parse(Context.Request.Cookies["reqnum"]) <= 40)
+                    {
+                        <h2>****</h2>
+                    }
+                    else
+                    {
+                        <h2>*****</h2>
+                    }
+                }
+               
+
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
                         Featured
@@ -61,6 +87,11 @@
                         <li class="list-group-item">A second item</li>
                         <li class="list-group-item">A third item</li>
                     </ul>
+                    <h2></h2>
+                 
+                        
+                        
+
                 </div>
             </div>
             <div class="col-10 content">

@@ -18,10 +18,28 @@ options.IdleTimeout = TimeSpan.FromDays(1));
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+        
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseSession();
 
+            app.UseSession();
+            app.Use(async (cont, next) =>
+            {
+                if (cont.Request.Cookies.ContainsKey("reqnum"))
+                {
+                    int num = int.Parse(cont.Request.Cookies["reqnum"]);
+                    cont.Response.Cookies.Append("reqnum", (++num).ToString());
+
+
+                }
+                else
+                {
+                    cont.Response.Cookies.Append("reqnum", "1");
+                }
+
+                await next();
+
+            });
             app.UseAuthorization();
 
             app.MapControllerRoute(
