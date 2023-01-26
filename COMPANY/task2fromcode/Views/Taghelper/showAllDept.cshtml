@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<department>
+
+@{
+    int index = 1;
+}
+<div>
+    <div>
+        <a class="btn btn-success" asp-action="adddept" asp-controller="Taghelper">ADD NEW Department</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="col-1">#</th>
+                <th class="col-8">Name</th>
+                <th class="col-3">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@(index++)</th>
+                    <td>@item.DName</td>
+
+                    <td><a class="btn btn-info" asp-controller="Taghelper" asp-action="Deptdetails" asp-route-id="@item.Dnum">Details</a> <a class="btn btn-primary" asp-controller="Taghelper" asp-action="editdept" asp-route-id="@item.Dnum">Edit</a> <a class="btn btn-danger" asp-controller="Taghelper" asp-action="deletdept" asp-route-id="@item.Dnum">Delete</a></td>
+                </tr>
+            }
+
+
+
+
+
+        </tbody>
+    </table>
+
+</div>

@@ -31,5 +31,19 @@
         </span>
     </div>
 }
+<span class="two">Employee in this department:</span>
+@foreach (var item in Model.Employees)
+{
 
-<a href="/department">ADD employee to the projects </a>
+    <div>
+
+
+        <span>
+            <b> @item.Fname</b>
+            
+
+        </span>
+    </div>
+}
+
+<a href="/department/addform">ADD employee to the projects </a>

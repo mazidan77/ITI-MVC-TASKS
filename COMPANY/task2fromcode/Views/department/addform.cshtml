@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-action="afteradd" asp-controller="department">
+  <select name="SSN" id="super">
+         <option value="">select Employee</option>
+
+    @foreach (var item in ViewBag.emp)
+    {
+             <option value="@item.SSN">@item.Fname @item.Lname</option>
+
+    }
+
+
+
+
+           
+
+            </select>
+
+
+    <select multiple name="p" id="super">
+        <option value="">select project</option>
+
+        @foreach (var item in ViewBag.projects)
+        {
+            <option  value="@item.Pnumber">@item.Name </option>
+
+        }
+
+
+
+
+
+
+    </select>
+    <input type="submit" value="Submit">
+</form>

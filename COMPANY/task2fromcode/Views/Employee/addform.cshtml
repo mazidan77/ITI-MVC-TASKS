@@ -5,28 +5,40 @@
 
     <table>
         <tr>
-            <th> <label for="first-name">First Name:</label></th>
-            <th><input type="text" id="first-name" name="Fname"></th>
+            @*<th> <label for="first-name">First Name:</label></th>
+            <th><input type="text" id="first-name" name="Fname"></th>*@
+            <th>@Html.Label("Fname")</th>
+            <th>@Html.TextBox("Fname")</th>
         </tr>
         <tr>
-            <th><label for="last-name">Midle Name:</label></th>
-            <th><input type="text" id="last-name" name="Mname"></th>
+            @*<th><label for="last-name">Midle Name:</label></th>
+            <th><input type="text" id="last-name" name="Mname"></th>*@
+            <th>@Html.Label("Mname")</th>
+            <th>@Html.TextBox("Mname")</th>
         </tr>
         <tr>
-            <th><label for="last-name">Last Name:</label></th>
-            <th><input type="text" id="last-name" name="Lname"></th>
+            @*<th><label for="last-name">Last Name:</label></th>
+            <th><input type="text" id="last-name" name="Lname"></th>*@
+            <th>@Html.Label("Lname")</th>
+            <th>@Html.TextBox("Lname")</th>
         </tr>
         <tr>
-            <th> <label for="ssn">SSN:</label></th>
-            <th><input type="text" id="ssn" name="SSN"></th>
+ @*           <th> <label for="ssn">SSN:</label></th>
+            <th><input type="text" id="ssn" name="SSN"></th>*@
+            <th>@Html.Label("SSN")</th>
+            <th>@Html.TextBox("SSN")</th>
         </tr>
         <tr>
-            <th><label for="salary">Salary:</label></th>
-            <th> <input type="text" id="salary" name="salary"></th>
+           @* <th><label for="salary">Salary:</label></th>
+            <th> <input type="text" id="salary" name="salary"></th>*@
+            <th>@Html.Label("salary")</th>
+            <th>@Html.TextBox("salary")</th>
         </tr>
         <tr>
-            <th> <label for="address">Address:</label></th>
-            <th> <input type="text" id="address" name="address"><br></th>
+       @*     <th> <label for="address">Address:</label></th>
+            <th> <input type="text" id="address" name="address"><br></th>*@
+            <th>@Html.Label("address")</th>
+            <th>@Html.TextBox("address")</th>
         </tr>
         <tr>
             <th>

@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model department
+<form asp-action="aftereditdept" asp-controller="Taghelper">
+      <label asp-for="DName">department name</label>
+      <input asp-for="DName">
+
+      <label asp-for="Dnum">department number</label>
+    <input disabled asp-for="Dnum">
+      <input type="submit" value="add">
+
+    </form>
