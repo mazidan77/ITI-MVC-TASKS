@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -10,8 +11,14 @@ namespace task2fromcode.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required ]
+        //[Remote(action:"SSNexist" ,controller:"Employee")]
         public int SSN { get; set; }
+
+
         [StringLength(50)]
+       
+        [Required]
         public string? Fname { get; set; }
         [StringLength(50)]
         public string? Mname { get; set; }

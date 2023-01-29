@@ -6,8 +6,62 @@
 
 
 
-@model project;
-<form action="/projects/afteradd">
+@model projectVM;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+
+
+
+<form asp-controller="projects" asp-action="addform" method="post">
+
+    <table>
+        @*<div asp-validation-summary="ModelOnly"class="text-danger"></div>*@
+        <tr>
+            <th> <label asp-for="Name"></label></th>
+            <th><input asp-for="Name"></th>
+            <th><span asp-validation-for="Name" class="text-danger"></span></th>
+        </tr>
+        <tr>
+            <th><label asp-for="Pnumber"></label></th>
+            <th><input asp-for="Pnumber"></th>
+            <th><span asp-validation-for="Pnumber " class="text-danger"></span></th>
+           
+        </tr>
+        <tr>
+            <th><label asp-for="location"></label></th>
+            <th><input asp-for="location"></th>
+            <th><span asp-validation-for="location" class="text-danger"></span></th>
+           
+        </tr>
+        <tr>
+            <th><label asp-for="Confirmlocation"></label></th>
+            <th><input asp-for="Confirmlocation"></th>
+            <th><span asp-validation-for="Confirmlocation" class="text-danger"></span></th>
+
+        </tr>
+    
+        
+
+    </table>
+
+
+    <input type="submit" value="Submit">
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+
+@*<form action="/projects/afteradd">
 
     <table>
         <tr>
@@ -50,4 +104,4 @@
 
 
     <input type="submit" value="Submit">
-</form>
+</form>*@

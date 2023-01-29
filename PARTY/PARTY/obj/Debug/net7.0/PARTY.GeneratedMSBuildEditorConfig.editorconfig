@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PARTY
 build_property.RootNamespace = PARTY
-build_property.ProjectDir = D:\PROGRAMMING\ITI Q2 MNF .NET\MVC\study\PARTY\PARTY\
+build_property.ProjectDir = D:\PROGRAMMING\ITI Q2 MNF .NET\MVC\TASKS\PARTY\PARTY\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PROGRAMMING\ITI Q2 MNF .NET\MVC\study\PARTY\PARTY
+build_property.MSBuildProjectDirectory = D:\PROGRAMMING\ITI Q2 MNF .NET\MVC\TASKS\PARTY\PARTY
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Home/hello.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Home/hello.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxoZWxsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Party/addform.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Party/addform.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydHlcYWRkZm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Party/all.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Party/all.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydHlcYWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Party/later.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Party/later.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydHlcbGF0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Party/thankyou.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Party/thankyou.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydHlcdGhhbmt5b3UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Shared/Error.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Shared/_MyLayout.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Shared/_MyLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/_ViewImports.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/_ViewStart.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/study/PARTY/PARTY/Views/Shared/_Layout.cshtml]
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/PARTY/PARTY/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-cqpr1e091w

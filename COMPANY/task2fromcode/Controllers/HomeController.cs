@@ -21,9 +21,10 @@ namespace task2fromcode.Controllers
         public IActionResult login(employee emp)
         {
 
-            var q = DB.employees.Where(x => x.SSN == emp.SSN && x.Fname==emp.Fname).SingleOrDefault();
-          
-            if (q!=null)
+            var q = DB.employees.Where(x => x.SSN == emp.SSN && x.Fname == emp.Fname).SingleOrDefault();
+
+            
+            if (ModelState.IsValid == true && q!=null)
             {
                 //set session
                 HttpContext.Session.SetInt32("id", q.SSN);
@@ -31,14 +32,20 @@ namespace task2fromcode.Controllers
 
 
 
+            }else if(q==null)
+                {
+                ModelState.AddModelError("", "wrong name or SSN");
             }
-            else
-            {
-                return Content("niiii");
-            }
+
+
+           
+                return View("Index");
+
+           
 
 
         }
+        
 
         public IActionResult hello()
         {

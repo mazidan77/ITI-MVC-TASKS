@@ -5,18 +5,26 @@
 @*<div>
     <a class="btn btn-success" href="/employee/">Manage Employee</a>
 </div>*@
-
+@model employee
 <form action="/home/login">
+   
     <div class="form-group">
-        <label for="Fname">Name</label>
-        <input type="text" class="form-control" id="Fname" name="Fname" placeholder="name">
+        <label asp-for="Fname">Name</label>
+        <input asp-for="Fname" class="form-control">
+        <span class="text-danger" asp-validation-for="Fname"></span>
     </div>
     <div class="form-group">
-        <label for="SSN">SSN</label>
-        <input type="password" class="form-control" id="SSN" name="SSN" placeholder="Password">
+        <label asp-for="SSN">SSN</label>
+        <input asp-for="SSN" type="password"  class="form-control" >
+        <span class="text-danger" asp-validation-for="SSN"></span>
     </div>
     <div class="form-group">
         <div></div>
     </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\study\\PARTY\\PARTY\\PARTY.csproj": {}
+    "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\TASKS\\PARTY\\PARTY\\PARTY.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\study\\PARTY\\PARTY\\PARTY.csproj": {
+    "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\TASKS\\PARTY\\PARTY\\PARTY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\study\\PARTY\\PARTY\\PARTY.csproj",
+        "projectUniqueName": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\TASKS\\PARTY\\PARTY\\PARTY.csproj",
         "projectName": "PARTY",
-        "projectPath": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\study\\PARTY\\PARTY\\PARTY.csproj",
+        "projectPath": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\TASKS\\PARTY\\PARTY\\PARTY.csproj",
         "packagesPath": "C:\\Users\\Abdullah Zidan\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\study\\PARTY\\PARTY\\obj\\",
+        "outputPath": "D:\\PROGRAMMING\\ITI Q2 MNF .NET\\MVC\\TASKS\\PARTY\\PARTY\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah Zidan\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -13,7 +13,9 @@
         <thead>
             <tr>
                 <th class="col-1">#</th>
-                <th class="col-8">Project name </th>
+                <th class="col-2">Project name </th>
+            <th class="col-2">Project Number </th>
+            <th class="col-2">Project Location </th>
                 <th class="col-3">Actions</th>
 
             </tr>
@@ -28,8 +30,10 @@
                 <tr>
                     <th>@(index++)</th>
                     <td>@item.Name  </td>
+                <td>@item.Pnumber  </td>
+                <td>@item.location  </td>
 
-                    <td><a class="btn btn-info" href="/employee/getinfo/">Details</a> <a class="btn btn-primary" href="/employee/editform/">Edit</a> <a class="btn btn-danger" href="/employee/delete/">Delete</a></td>
+                    <td><a class="btn btn-info" href="/employee/getinfo/">Details</a> <a class="btn btn-primary" href="/employee/editform/">Edit</a> <a class="btn btn-danger" href="/Projects/delete/@item.Pnumber">Delete</a></td>
                 </tr>
             
 

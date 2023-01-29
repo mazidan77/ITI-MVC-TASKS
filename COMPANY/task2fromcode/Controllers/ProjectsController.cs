@@ -16,7 +16,7 @@ namespace task2fromcode.Controllers
             var q = DB.Projects.ToList();
                 return View(q);
         }
-
+        [HttpGet]
         public IActionResult addform()
         {
             ViewBag.dept = DB.Departments.ToList();
@@ -24,13 +24,50 @@ namespace task2fromcode.Controllers
             return View();
         }
 
-        public IActionResult AFTERADD(project proj)
-        {
-            DB.Projects.Add(proj);
-            DB.SaveChanges();
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult addform(projectVM proj)
+        {
+            if(ModelState.IsValid)
+            {
+                project newproject = new project()
+                {
+                    Name = proj.Name,
+                    Pnumber = proj.Pnumber,
+                    location = proj.location
+                };
+                DB.Projects.Add(newproject);
+                DB.SaveChanges();
+
+
+                return RedirectToAction(nameof(showall));
+            }
+            else
+            {
+                return View();
+            }
+       
+        }
+
+        public IActionResult delete(int id)
+        {
+          var q= DB.Projects.Where(x=>x.Pnumber== id).SingleOrDefault();
+            DB.Projects.Remove(q);
+            DB.SaveChanges();
 
             return RedirectToAction(nameof(showall));
         }
+
+
+        //public IActionResult AFTERADD(project proj)
+        //{
+        //    DB.Projects.Add(proj);
+        //    DB.SaveChanges();
+
+
+        //    return RedirectToAction(nameof(showall));
+        //}
+
     }
 }

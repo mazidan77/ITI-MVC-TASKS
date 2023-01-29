@@ -13,6 +13,9 @@ namespace task2fromcode.Controllers
             return View(q);
         }
 
+
+
+
         public IActionResult getinfo(int id)
         {
             var q = DB.employees.Where(x=>x.SSN==id).SingleOrDefault();
@@ -96,5 +99,19 @@ namespace task2fromcode.Controllers
 
 
         }
+
+
+        //public IActionResult SSNexist(int SSN)
+        //{
+        // var q=  DB.employees.Where(x=>x.SSN==SSN).FirstOrDefault();
+        //    if (q == null)
+        //    {
+        //        return Json(true);
+        //    }
+        //    else
+        //    {
+        //        return Json(false);
+        //    }
+        //}
     }
 }
