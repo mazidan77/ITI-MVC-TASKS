@@ -13,12 +13,37 @@ options.IdleTimeout = TimeSpan.FromDays(1));
 
             var app = builder.Build();
 
+
+            //app.Use(async(context, next) =>
+            //{
+            //  await context.Response.WriteAsync("middleware 1\n");
+            //    await next();
+            //    await context.Response.WriteAsync("middleware 5\n");
+
+
+            //});
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("middleware 2\n");
+            //    await next();
+            //    await context.Response.WriteAsync("middleware 4\n");
+
+
+            //});
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("middleware 3\n");
+            //});
+            //app.Run();
+
+
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-        
+
             app.UseStaticFiles();
             app.UseRouting();
 

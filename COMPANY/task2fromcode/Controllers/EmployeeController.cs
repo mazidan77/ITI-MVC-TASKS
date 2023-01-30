@@ -54,12 +54,23 @@ namespace task2fromcode.Controllers
 
         public IActionResult addnew(employee emp)
         {
-            var q = DB.employees.ToList();
-            DB.employees.Add(emp);
-            DB.SaveChanges();
+            var e = DB.employees.Where(x=>x.SSN== emp.SSN).FirstOrDefault();
+            if (e==null)
+            {
+                var q = DB.employees.ToList();
+                DB.employees.Add(emp);
+                DB.SaveChanges();
 
 
-            return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                ModelState.AddModelError("","errie");
+                return View("addform");
+            }
+
+          
         }
 
         public IActionResult delete(int id)

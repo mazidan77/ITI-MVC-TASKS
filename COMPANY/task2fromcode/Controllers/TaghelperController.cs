@@ -27,7 +27,7 @@ namespace task2fromcode.Controllers
 
             return View(q);
         }
-
+        [HttpGet]
         public IActionResult addemp()
         {
            var q = DB.employees.ToList();
@@ -36,14 +36,26 @@ namespace task2fromcode.Controllers
         }
 
         [HttpPost]
-        public IActionResult afteraddemp(employee emp)
+        public IActionResult addemp(employee emp)
         {
-            var q = DB.employees.ToList();
-         DB.employees.Add(emp);
-            DB.SaveChanges();
-            return RedirectToAction(nameof(showAllEmp));
-        }
+            var e = DB.employees.Where(x => x.SSN == emp.SSN).FirstOrDefault();
+            if (e == null)
+            {
 
+                var q = DB.employees.ToList();
+                DB.employees.Add(emp);
+                DB.SaveChanges();
+                return RedirectToAction(nameof(showAllEmp));
+            }
+            else
+            {
+                var q = DB.employees.ToList();
+                ViewBag.q = new SelectList(q, "SSN", "Fname");
+                ModelState.AddModelError("SSN", "SSN alrady taken");
+                return View();
+
+            }
+        }
         public IActionResult editemployee(int id)
         {
             var q = DB.employees.Where(x=>x.SSN==id).SingleOrDefault();

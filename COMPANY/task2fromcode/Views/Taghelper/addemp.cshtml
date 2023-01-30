@@ -9,7 +9,7 @@
 
 
 
-<form asp-controller="Taghelper" asp-action="afteraddemp">
+<form asp-controller="Taghelper" asp-action="addemp">
 
     <table>
         <tr>
@@ -30,6 +30,7 @@
         <tr>
                        <th> <label asp-for="SSN">SSN:</label></th>
             <th><input asp-for="SSN"></th>
+            <th><<span asp-validation-for="SSN"></span></th>
           
         </tr>
         <tr>
