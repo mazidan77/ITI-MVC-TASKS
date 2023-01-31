@@ -4,7 +4,7 @@
 @{
 }
 @model workfor
-<form asp-action="updatehours" asp-controller="workfor">
+<form asp-action="update" asp-controller="workfor">
 
     <div class="form-group">
         <label asp-for="ESSN"> employee name</label>
@@ -22,12 +22,12 @@
     </div>
 
   
-    <div class="form-group">
+    <div class="form-group" id="hourarea">
         <label asp-for="hour">hours</label>
         <input asp-for="hour" />
     </div>
 
-    
+    <input type="submit" value="update" />
   
 
 </form>

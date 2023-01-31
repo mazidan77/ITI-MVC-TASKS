@@ -35,6 +35,14 @@ namespace task2fromcode.Controllers
             return PartialView("_Hours", q);
         }
 
+        public IActionResult update(workfor f)
+        {
+            var q = DB.WorksFor.SingleOrDefault(s => s.ESSN == f.ESSN && s.Pnum == f.Pnum);
+            q.hour = f.hour;
+            DB.SaveChanges();
+            return RedirectToAction("updatehours");
+        }
+
 
     }
 }

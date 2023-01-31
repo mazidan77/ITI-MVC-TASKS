@@ -5,5 +5,4 @@
 @model workfor
 
 <label asp-for="Pnum"></label>
-<select asp-for="Pnum" asp-items="@ViewBag.q"></select>
-<option>choose project</option>
+<select asp-for="Pnum" asp-items="@ViewBag.q" class="form-control"> <option>choose project</option></select>
