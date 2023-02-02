@@ -1,5 +1,6 @@
 using layers.Models;
 using layers.Reposiotries;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace layers
@@ -14,6 +15,22 @@ namespace layers
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("myCS"));
             });
+
+            builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<companyDBcontext>();
+            builder.Services.Configure<IdentityOptions>(x =>
+            {
+                x.Password.RequireNonAlphanumeric = false;
+                x.Password.RequireUppercase= false;
+                x.Password.RequireLowercase= false;
+                x.Password.RequiredLength = 6;
+                x.Password.RequireDigit=false;
+                x.User.RequireUniqueEmail = true;
+            });
+
+
+
+
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -34,7 +51,10 @@ namespace layers
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
+
 
             app.MapControllerRoute(
                 name: "default",

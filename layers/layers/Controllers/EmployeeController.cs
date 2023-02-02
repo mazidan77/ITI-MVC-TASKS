@@ -1,10 +1,12 @@
 ﻿using layers.Models;
 using layers.Reposiotries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace layers.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         IemployeeRepo ER;
@@ -13,6 +15,7 @@ namespace layers.Controllers
         {
            this.ER = ER;
         }
+
         public IActionResult Index()
         {
            

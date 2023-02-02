@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\PROGRAMMING\ITI Q2 MNF .NET\MVC\TASKS\layers\layers
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/layers/layers/Views/account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/layers/layers/Views/account/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxwcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/layers/layers/Views/account/registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxyZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROGRAMMING/ITI Q2 MNF .NET/MVC/TASKS/layers/layers/Views/Employee/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcYWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

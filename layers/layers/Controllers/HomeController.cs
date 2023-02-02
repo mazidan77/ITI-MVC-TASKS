@@ -1,10 +1,12 @@
 ﻿using layers.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 
 namespace layers.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,7 +21,7 @@ namespace layers.Controllers
         public IActionResult Index()
         {
             var q = DB.employees.Where(x => x.SSN == 1).SingleOrDefault();
-            return View(q);
+            return RedirectToAction("registration","account");
         }
 
         public IActionResult Privacy()
